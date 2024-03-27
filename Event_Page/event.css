@@ -1,0 +1,357 @@
+:root{
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: .1rem solid rgba(255,255,255,.3);
+}
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+.html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+.html::-webkit-scrollbar{
+    width: 8rem;
+}
+
+.html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+.html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body{
+    background: white;
+}
+
+.header{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.header .logo img{
+    height: 6rem;
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.4rem;
+    color: #2a2727;
+    text-decoration: none;
+}
+
+.header .navbar a:hover{
+    color: #e16e40;
+    border-bottom: .1rem solid var(--main-color) ;
+    padding-bottom: .5rem;
+}
+
+.hero-section {
+  background-image: linear-gradient(to bottom, #e16e40, #ffaf66);
+   /* background-image: url("DSC_4331.JPG"); */
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-repeat: no-repeat;
+}
+
+
+ /* transition: transform 0.3s ease;
+}
+
+.speaker-card:hover {
+  transform: translateY(-5px);
+}*/
+
+
+.hero-section .countdown{
+   margin-bottom: 10%;
+
+}
+
+.hero-section .countdown h2{
+  font-size: 50px;
+  margin-left: 5%;
+
+}
+
+/*buttons*/
+
+
+.hero-section .countdown.buttons-row {
+    display: flex;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10%;
+    cursor: pointer;
+  }
+
+  .register-button {
+    border-radius: 20px;
+    height: 50px;
+  }
+
+  .details-button{
+    border-radius: 20px;
+    height: 50px;
+    width: 130px;
+  }
+  
+/** card-section */
+
+.card-section {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color:  white;
+}
+
+.upcoming  h1{
+    font-size: 50px;
+    margin-top: 33%;
+    color: #e16e40;
+}
+
+.upcoming2 h1{
+  font-size: 50px;
+  margin-top: 33%;
+  color: #e16e40;
+  margin-bottom: 12%;
+}
+
+.main {
+    width: 100%;
+    margin: 2px;
+    justify-content: center; /* Horizontally center content */
+    align-items: center;
+    margin-left: 130px;
+    margin-top: 4%;
+}
+   
+   .card{
+        width: 40%;
+        display: inline-block;
+        box-shadow: 2px 2px 5px black;
+        border-radius: 20px; 
+        margin: 3%;
+        background-color: #e16e40;
+       }
+   
+   .image img{
+     height: 380px;
+     width: 100%;
+     border-top-right-radius: 20px;
+     border-top-left-radius: 20px;
+    }
+   
+   .title{
+    
+     text-align: center;
+     padding: 10px;
+     
+    }
+   
+   h1{
+     font-size: 20px;
+    }
+   
+   .des{
+     padding: 3px;
+     text-align: center;
+    
+     padding-top: 10px;
+     border-bottom-right-radius: 5px;
+     border-bottom-left-radius: 5px;
+   }
+   button{
+     font-size: large;
+     margin-top: 40px;
+     margin-bottom: 10px;
+     background-color: rgb(231, 223, 223);
+     border: 1px solid black;
+     border-radius: 20px;
+     padding:10px;
+     transition: background-color 0.5s;
+     transition: transform 0.5s ease;
+   }
+   button:hover{
+     background-color: black;
+     color: white;
+     transition: .5s;
+     cursor: pointer;
+     transform: translateY(-5px);
+
+   }
+
+   .countdown {
+    text-align: center;
+    color: white;
+    margin-bottom: 20%;
+}
+
+.countdown h2{
+    font-size: 70px;
+}
+
+#countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.time {
+    font-size: 40px;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 10px;
+   
+}
+
+.time:hover{
+    background-color: rgb(71, 63, 63);
+}
+
+
+/* Add this at the end of your existing CSS */
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 1rem 5%;
+  }
+
+  .header .logo img {
+    height: 4rem;
+  }
+
+  .hero-section {
+    height: 400px;
+  }
+
+  .countdown h2 {
+    font-size: 50px;
+  }
+
+  .time {
+    font-size: 30px;
+    padding: 8px 15px;
+  }
+
+  .hero-msg {
+    font-size: 0.7rem;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .buttons-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 1rem 5%;
+  }
+
+  .header .logo img {
+    height: 4rem;
+  }
+
+  .header .navbar {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #f9f9f9;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    z-index: 999;
+  }
+
+  .header .navbar a {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    color: #2a2727;
+  }
+
+  .hero-section {
+    height: 400px;
+  }
+
+  .hero-msg {
+    font-size: 0.75rem;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header .logo img {
+    height: 3rem;
+  }
+
+  .hero-section {
+    height: 300px;
+  }
+
+  .countdown h2 {
+    font-size: 40px;
+  }
+
+  .time {
+    font-size: 25px;
+    padding: 6px 10px;
+  }
+
+  .hero-msg {
+    font-size: 0.7rem;
+  }
+
+  .card {
+    width: 100%;
+    margin: 2% 0;
+  }
+}
